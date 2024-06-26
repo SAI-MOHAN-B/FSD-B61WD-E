@@ -63,3 +63,28 @@ var arr = [23,24,25]
 var res = arr;
 res[0] = 34;
 console.log(res);
+5.Write a JavaScript program to find the most frequent item of an array.
+Sample array: 
+var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
+Sample Output: q ( 5 times )
+
+var obj = {};
+var count=0;
+var maxele;
+var arr =[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
+for(var i=0;i<arr.length;i++){
+var ele = arr[i];
+if(obj[ele]){
+obj[ele]+=1;
+count++;
+}
+else{
+obj[ele]=1
+}
+if(obj[ele]>count){
+var freq = obj[ele]
+maxele = ele;
+}
+}
+
+console.log("element occured "+maxele);
