@@ -43,3 +43,23 @@ var test = obj.place;
 for(var j in test){
   console.log(test[j]);
 }
+
+// Copy By Value
+// They are applicable to primitive data types..
+// They are not affecting the original values
+var a = 32;
+var b = 33;
+var c = 34;
+var c = b;
+console.log(c);
+console.log(a);
+console.log(b);
+// a -32
+//b -33
+// c-33
+// Copy By Reference:
+// They are applicable to arrays as well as objects
+var arr = [23,24,25]
+var res = arr;
+res[0] = 34;
+console.log(res);
