@@ -1,0 +1,45 @@
+var obj = {
+  name:"guvi",
+  age:23,
+  year:2018,
+  attendance:["mon","tue"]
+}
+// How to access it?
+// To access  the Objects we need the keyname
+
+// 2 ways we can access the value inside the object
+
+// Dot Method:
+// .
+// Syntax:objectname.keyname
+// is the most common method across all the langauages
+console.log(obj.age);
+console.log(obj.year);
+console.log(obj.attendance[0]);
+// How to add the k:v pair
+//Syntax:objectname.keyname = value
+obj.gender = "male"
+// nested Object
+obj.place = {namedata:"sanfranscio"}
+//Update:
+//Syntax:objectname.keyname = value
+obj.age = 24;
+// Delete:
+// Assuming need to remove the year
+// Syntax: delete objectname.keyname
+delete obj.year
+
+//Box Method:
+// Syntax:objectname["keyname"]
+// this is used when you have for-in loop
+
+// it is applicable to key-value pairs
+// Syntax:for(var key in Objectname){}
+// here key represents the Object keys
+for(var i in obj){
+ console.log(i,obj[i]); 
+}
+var test = obj.place;
+for(var j in test){
+  console.log(test[j]);
+}
