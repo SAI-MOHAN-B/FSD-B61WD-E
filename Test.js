@@ -19,3 +19,34 @@ var res = [
     "title": "eum et est occaecati",
     "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
   }]
+// Object
+var obj ={
+  name:"guvi",
+  age:23
+}
+
+// JSON:
+var obj1 = {
+  "name":"guvi",
+  "age":23
+}
+// . and box method both are appplicable for JSON
+console.log(obj1.name);
+console.log(obj1["name"]);
+
+// Array of JSON:
+var arr = [{
+  "name":"guvi",
+  "age":23
+},{
+  "name":"geek",
+  "age":24
+}]
+// Syntax: arrayname[index number].keyname
+console.log(arr[0].age);
+console.log(arr[1].name);
+// Iterate It:
+for(var i =0;i<arr.length;i++){
+console.log(arr[i].name,arr[i].age);
+
+}
