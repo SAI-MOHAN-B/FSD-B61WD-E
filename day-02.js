@@ -70,6 +70,7 @@ Sample Output: q ( 5 times )
 
 var obj = {};
 var count=0;
+var min_occ = 1;
 var maxele;
 var arr =[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
 for(var i=0;i<arr.length;i++){
@@ -81,8 +82,8 @@ count++;
 else{
 obj[ele]=1
 }
-if(obj[ele]>count){
-var freq = obj[ele]
+if(obj[ele]>min_occ){
+min_occ = obj[ele]
 maxele = ele;
 }
 }
