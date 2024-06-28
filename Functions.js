@@ -76,3 +76,20 @@ break;
 }
 }
 console.log(res(arr));
+
+
+
+// IIFE:
+// immediately Invoked function execution
+// there is no return keyword here
+
+// Syntax: (function(){})()
+(function(x,y){
+  console.log(x+y);
+})(12,13);
+
+// Exception:
+var res = (function(x,y){
+  return x*y;
+  })(34,54);
+console.log(res);
