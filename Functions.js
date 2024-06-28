@@ -49,3 +49,30 @@ console.log(test);
 return a+b;
 }
 
+write a  anonymous function which gives the unique number in the array
+Input:var arr=[1,1,2,3,4,5,6,7,4,3,2,5,6];
+Ouput:7 
+
+// Input:var arr=[1,1,2,3,4,5,6,7,4,3,2,5,6];
+// Ouput:7 
+var arr=[1,1,2,3,4,5,6,7,4,3,2,5,6];
+var temp = {};
+var res=  function(arr){
+for(var i=0;i<arr.length;i++){
+var ele = arr[i];
+if(temp[ele]){
+temp[ele]+=1
+}
+else{
+temp[ele] = 1;  
+}
+}
+// Apply for in loop for tempp object
+for(var key in temp){
+if(temp[key] == 1){
+return key;
+break;
+}
+}
+}
+console.log(res(arr));
