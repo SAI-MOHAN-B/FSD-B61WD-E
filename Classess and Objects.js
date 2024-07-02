@@ -10,6 +10,10 @@ this.brand = brand;
 print_color(){
 return "the color of the car is"+this.color;
 }
+set_color(br){
+this.brand = br;
+return "the updated brand value is"+this.brand;
+}
 
 }
 
@@ -24,3 +28,7 @@ var c2 =  new Car("black","RollceRoyce");
 
 // Syntax: referencevariable.methodname()
 console.log(c1.print_color());
+// setters:
+// Updating the values
+// Syntax: referencevariable.methodname(value)
+console.log(c1.set_color("porsche"));
