@@ -32,3 +32,36 @@ console.log(c1.print_color());
 // Updating the values
 // Syntax: referencevariable.methodname(value)
 console.log(c1.set_color("porsche"));
+
+
+// Ectra Note
+var obj = {
+  name:"guvi",
+  age:23
+}
+var res = Object.keys(obj);
+for(var i = 0;i<res.length;i++){
+console.log(obj[res[i]]);
+}
+
+
+var arr = [12,13,14,15];
+for(var i of arr){
+console.log(i);
+}
+// This loop doesn't work on indexes
+// They work on the array elements
+// This is uni direction
+
+
+
+// For-in loop
+// Only for Objects
+//  Undirection
+var obj1 = {
+  name:"guvi geek",
+  age:25
+}
+for(var key in obj1){
+console.log(obj1[key]);
+}
