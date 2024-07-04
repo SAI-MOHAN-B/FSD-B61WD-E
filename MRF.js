@@ -50,3 +50,24 @@ var arr = [12,13,14,15];
 // returns the new array
 var res = arr.filter((ele)=>ele%2 == 0);
 console.log(res);
+
+
+
+var arr = [12,13,14,15];
+// var res = 54;
+// without disturbing the original array
+
+// Step 01:apply for loop
+// Step 02: sum = 0; 
+// Step 03:apply for loop and take the sum = sum+arr[i]
+// Step 04: print the sum lastly
+
+// reduce:
+// it is applicable only to arrays
+// reduce takes function as a paramater
+// inside the function we have two paramater
+// Syntax: arr.reduce((acc,cv)=>acc+cv,0)
+// here acc: is a initial value
+// print the result
+var res = arr.reduce((acc,cv)=>acc+cv,0);
+console.log(res);
