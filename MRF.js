@@ -71,3 +71,12 @@ var arr = [12,13,14,15];
 // print the result
 var res = arr.reduce((acc,cv)=>acc+cv,0);
 console.log(res);
+
+
+var arr = [12,13,14,15];
+// for each is an alternative to for loop
+//  for each is only used forr the printing purpose
+// foreach takes functions as a parameter
+// apply on each and every element of the array
+// it returns undefined
+arr.forEach((ele)=>console.log(ele));
