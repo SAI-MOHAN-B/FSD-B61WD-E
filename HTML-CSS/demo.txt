@@ -1,0 +1,66 @@
+self closing as well as non-self closing
+self closing tags: They itself close themselves
+ex: meta , img..
+non-self closing tags: we need to explicititly close tags
+ex: head, body, title...
+Element:
+Combination of tag+ content
+Ex: p tags
+Attribute:
+Attribute represents the additional information
+
+
+Collect some  information from the user:
+with  the help of form tags
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>this is a new website</p>
+    <h1>This is h1</h1>
+    <h2>this is h2</h2>
+    <h3>this is h3</h3>
+    <h4>this is h4</h4>
+    <h5>this is h5</h5>
+    <h6>this is h6</h6>
+    <a href="https://www.google.com">Click me</a>
+</body>
+</html>
+
+
+FORM GET AND POST:
+The default method of the form is GET
+if you wanted to protect your form then
+Change the Method to POST
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post">
+        <label for="email">Email</label><br>
+        <input type="email" name="Email" id="email"><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="Pass" id="password"><br>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
