@@ -1,0 +1,232 @@
+Inline css:
+Internal css
+Externa css:
+
+Inline css: It is applicable to the single HTML element
+syntax : <div style="property:value">this is div</div>
+
+Internal css:
+It is applicable  for more then 1 elements
+syntax: <style></style>
+
+Selectors:
+Selectors are used to apply the css for more than 1 elements
+class,id, tag
+
+class Selectors:
+It is applicablle for more than 1 element:
+syntax: .classname
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+        background-color: green;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: green; font-family: 'Courier New', Courier, monospace;">this is div</div>
+    <div class="main">this is main</div>
+    <p class="main">this is p</p>
+    <section class="main">this is section</section>
+</body>
+</html>
+
+id selector:
+it is applicable for a single element
+you cannnot apply id selector for more than 1 element
+syntax:#main{
+    background-color: green
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+        background-color: green;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+  <div id="main">this is div</div>
+</body>a
+</html>
+
+tag selector:
+it is applicable for the tags:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+        background-color: green;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        p{
+            background-color: orange;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div>this is div</div>
+<div>this is div</div>
+<div>this is div</div>
+<p>this is p</p>
+<p>this is p</p>
+<p> this is p</p>
+</body>
+</html>
+
+if you have class as well as id selector
+then the id selector will have the highest priority
+
+inline css >id>class>tag
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+        background-color: green;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #main1{
+            background-color: brown;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="main" id="main1" style="background-color: orange;">this is div</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+        background-color: green;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .main1{
+            background-color: brown;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="main main1">this is div</div>
+</body>
+</html>
+
+Box Model:
+A box model is basically a box that is wrapped around every html element
+1.margin
+2.border
+3,.padding
+
+A margin is an imaginary space around an html element 
+margin:top,right,bottom,left
+measured in terms of px:
+
+
+A border:
+A thick imaginary line around the html element
+syntax:border:width,style,color
+
+A padding:
+A imaginary space around the content
+syntax:padding: 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .main{
+    
+        margin-top:30px;
+        margin-left: 50px;
+        border: 1px solid blue;
+        padding: 2px 3px 4px;
+        padding-left: 50px;
+
+      }
+    </style>
+</head>
+<body>
+<div class="main">this is div</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+         border: 1px solid black;
+         border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>
+                    23
+                </td>
+                <td>
+                    san matreo
+                </td>
+            </tr>
+            <tr>
+                <td>mary</td>
+                <td>24</td>
+                <td>san fransico</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
