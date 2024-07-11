@@ -1,0 +1,62 @@
+Media Query: RWD:
+it helps us to add the responsiveness manually
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      @media screen and (max-width:300px) {
+        div{
+            background-color: green;
+        }
+      }
+
+      @media screen and (min-width:400px) {
+        div{
+            background-color: orange;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid black;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div>this is div</div>
+</body>
+</html>
+
+Bootstrap 5:
+CDN: content delivery network
+Container: Used to  hold the elements
+
+Responsive Break Points:
+xs:extra small
+sm: small
+md: medium
+lg:large
+xl: extra large
+xxl: extra extra large
+
+xs: If the device width is less than 576px
+then while using .container class it will occupy 100% of screen width
+
+sm:
+ If the device width is between 576-768 px then
+then while using .container class it will occupy 540px of screen width
+
+md:
+ If the device width is between 768-992 px then
+then while using .container class it will occupy 720px of screen width
+
+
+lg:
+ If the device width is between 992-1200 px then
+then while using .container class it will occupy 960px of screen width
+Grids: rows and Columns
+
+
+Responsiveness needs the device break Points
+Syntax:col-{breakpoints}-{device ratio}
