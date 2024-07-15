@@ -1,0 +1,134 @@
+DOM:
+document Object model
+It is used to create the HTML elements dynamically
+
+3 steps in creating the DOM  element
+
+// creating the elements
+// to create the html elements dynamically using DOM
+// can use document.createElement()
+var ele = document.createElement("div");
+// this line provides the  output of div tag
+console.log(ele);
+
+// S2:
+// we need to add the content
+// using  a property:
+// innerHTML property
+ele.innerHTML = "this is a div";
+
+
+// S3:
+// To make the html element to be visible 
+// we  need to add them inside the body tag
+document.body.append(ele);
+
+
+// creating the elements
+// to create the html elements dynamically using DOM
+// can use document.createElement()
+var ele = document.createElement("div");
+ele.innerHTML = "<p>this is p </p>";
+document.body.append(ele);
+
+// inner HTML has some special Property:
+// if it contains any tag then it will 
+// parses those tags.
+// also used to create the HTML elements
+
+
+// creating the elements
+// to create the html elements dynamically using DOM
+// can use document.createElement()
+var ele = document.createElement("div");
+ele.innerText = "<p>this is p </p>";
+document.body.append(ele);
+
+// inner HTML has some special Property:
+// if it contains any tag then it will 
+// parses those tags.
+// also used to create the HTML elements
+
+//innerText:
+// it is also used to add the content to html elements
+//if you pass any html element inside the 
+// innerText property then it will print like a text
+
+set attribute:
+syntax:ele.setAttibute("attrname","attrvalue")
+var ele = document.createElement("div");
+ele.setAttribute("class","main");
+ele.setAttribute("id","main1");
+ele.innerHTML = "this is a attribute"
+document.body.append(ele);
+
+// for adding classname as well as id 
+// we have an alternative options
+var ele = document.createElement("div");
+ele.className = "main"
+ele.id = "main1"
+ele.innerHTML = "this is main"
+document.body.append(ele);
+
+var container =  document.createElement("div");
+container.className = "container";
+var row = document.createElement("div");
+row.className =  "row";
+var col =  document.createElement("div");
+col.className = "col";
+col.innerHTML = "this is col";
+row.append(col);
+container.append(row);
+document.body.append(container)
+
+Dom Methods:
+Already you have the HTML elements
+If you want to modify the html elements
+
+1.document.getElementById
+2.document.getElementsByClassName()
+3.document.getElementsByTagName()
+4.document.querySelector()
+5.document.querySelectorAll()
+
+
+document.getElementById:
+This method is applicable 
+when there is an Id selector/ unique element
+this method returns the html element 
+
+
+return type will be a html element :
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="email">Email</label><br>
+    <input type="email" name="" id="email">
+    <button type="button" onclick="foo()">Click me</button>
+    <script src="script.js"></script>
+</body>
+</html>
+function foo() {
+    var res = document.getElementById("email").value;
+    console.log(res);
+}
+
+
+create a HTML form (uding HTML) which will create the following elements
+1.Firstname
+2.Middlename
+3.Lastname
+4.Email
+5.password
+
+whenever the user enters the value inside those 
+fields, these values has to be displayed in the console.
+
+deploy them in netlify
+
