@@ -1,0 +1,240 @@
+DOM:
+document Object model
+It is used to create the HTML elements dynamically
+
+3 steps in creating the DOM  element
+
+// creating the elements
+// to create the html elements dynamically using DOM
+// can use document.createElement()
+var ele = document.createElement("div");
+// this line provides the  output of div tag
+console.log(ele);
+
+// S2:
+// we need to add the content
+// using  a property:
+// innerHTML property
+ele.innerHTML = "this is a div";
+
+
+// S3:
+// To make the html element to be visible 
+// we  need to add them inside the body tag
+document.body.append(ele);
+
+
+// creating the elements
+// to create the html elements dynamically using DOM
+// can use document.createElement()
+var ele = document.createElement("div");
+ele.innerHTML = "<p>this is p </p>";
+document.body.append(ele);
+
+// inner HTML has some special Property:
+// if it contains any tag then it will 
+// parses those tags.
+// also used to create the HTML elements
+
+
+// creating the elements
+// to create the html elements dynamically using DOM
+// can use document.createElement()
+var ele = document.createElement("div");
+ele.innerText = "<p>this is p </p>";
+document.body.append(ele);
+
+// inner HTML has some special Property:
+// if it contains any tag then it will 
+// parses those tags.
+// also used to create the HTML elements
+
+//innerText:
+// it is also used to add the content to html elements
+//if you pass any html element inside the 
+// innerText property then it will print like a text
+
+set attribute:
+syntax:ele.setAttibute("attrname","attrvalue")
+var ele = document.createElement("div");
+ele.setAttribute("class","main");
+ele.setAttribute("id","main1");
+ele.innerHTML = "this is a attribute"
+document.body.append(ele);
+
+// for adding classname as well as id 
+// we have an alternative options
+var ele = document.createElement("div");
+ele.className = "main"
+ele.id = "main1"
+ele.innerHTML = "this is main"
+document.body.append(ele);
+
+var container =  document.createElement("div");
+container.className = "container";
+var row = document.createElement("div");
+row.className =  "row";
+var col =  document.createElement("div");
+col.className = "col";
+col.innerHTML = "this is col";
+row.append(col);
+container.append(row);
+document.body.append(container)
+
+Dom Methods:
+Already you have the HTML elements
+If you want to modify the html elements
+
+1.document.getElementById
+2.document.getElementsByClassName()
+3.document.getElementsByTagName()
+4.document.querySelector()
+5.document.querySelectorAll()
+
+
+document.getElementById:
+This method is applicable 
+when there is an Id selector/ unique element
+this method returns the html element 
+
+
+return type will be a html element :
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="email">Email</label><br>
+    <input type="email" name="" id="email">
+    <button type="button" onclick="foo()">Click me</button>
+    <script src="script.js"></script>
+</body>
+</html>
+function foo() {
+    var res = document.getElementById("email").value;
+    console.log(res);
+}
+
+
+create a HTML form (using DOM) which will create the following elements
+1.Firstname
+2.Middlename
+3.Lastname
+4.Email
+5.password
+
+whenever the user enters the value inside those 
+fields, these values has to be displayed in the console.
+
+deploy them in netlify
+
+Dom Methods:
+Already you have the HTML elements
+If you want to modify the html elements
+
+1.document.getElementById
+2.document.getElementsByClassName()
+3.document.getElementsByTagName()
+4.document.querySelector()
+5.document.querySelectorAll()
+
+document.getElementsByClassName():
+This method is applied when you wanted to select only those 
+elements having the specific classname
+
+The return type will be of an array
+The value will be an Empty array if the specified classname is not found
+
+
+document.getElementsByTagName():
+This method is applied when you wanted to select only those 
+elements having the specific Tagname
+
+The return type will be of an array
+The value will be an Empty array if the specified classname is not found
+
+document.querySelector():
+ This method is used when you wanted to select the first occurence
+ This method returns the HTML elements
+
+ document.querySelector("classname/id/tag")
+
+ document.querySelectorAll():
+ This method returns all the occurence of the specific elements
+ The return type will be an array
+
+
+HTMLCollections: you can access them by using id, class, or index 
+
+Node list: it is the collection oif nodes
+we can access themm by using the index number.
+
+
+Append Vs AppendChild():
+AppendChild : Appends Only one single element 
+Append : Can appends multiple elements
+
+
+For DOM,
+if we need to add the events then
+we can use the addEventListener
+Syntax: .addEventListener("eventname",functionname)
+
+Here the Function name doesn't have the prefix called on
+whereas the HTML events we have the prefix called on
+ex: onload, onclick...
+
+function  foo(){
+    console.log("Hello world!!");
+}
+var button = document.createElement("button");
+button.className = "btn btn-primary";
+button.innerHTML = "Click Me";
+button.addEventListener("click",foo)
+document.body.append(button);
+
+1.alert 
+2.Prompt 
+3.confirm
+
+
+alert:
+To provide the information to the user 
+Testing Purpose
+
+Prompt:
+Here the User has to enter the Value from the Keyboard
+Prompt always reads the value as strings
+
+
+function  foo(){
+    var res = confirm("Do you want to End!!");
+    console.log(`The name entered is ${res}`)
+}
+var button = document.createElement("button");
+button.className = "btn btn-primary";
+button.innerHTML = "Click Me";
+button.addEventListener("click",foo)
+document.body.append(button);
+
+// Adding the data from the console to html element
+// To display the data from the console to html document
+function  foo(){
+    var res = document.getElementById("name").value;
+    var ele = document.createElement("div");
+    ele.innerHTML = `The name  Entered is ${res}`;
+    document.body.append(ele);
+}
+var input = document.createElement("input");
+input.setAttribute("type","text");
+input.id = "name";
+
+var button = document.createElement("button");
+button.className = "btn btn-primary";
+button.innerHTML = "Click Me";
+button.addEventListener("click",foo)
+document.body.append(input,button);
