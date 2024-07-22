@@ -1,0 +1,78 @@
+1. Synchronous vs Asynchronous
+Javascript is Synchronous only
+Synchronous: Sequential
+Asynchronous :
+A time Consuming
+
+setTimeOut()
+It is a Inbuilt Asynchronous Function
+syntax:setTimeOut(()=>{},Time in Millisec)
+It takes function as a paramater
+This setTimeOut function will execute after a specific interval
+
+console.log("App is starting!!");
+console.log("App is under Construction");
+setTimeout(()=>console.log("App is under testing!!!!"),3000)
+console.log("App is under maintainence");
+setTimeout(()=>console.log("App is under preprod!!!!"),1000)
+console.log("App Completes......");
+
+Event Loop Mechanism
+1.callstack
+2.callbackqueue
+3.eventqueue
+4.eventloop
+
+
+callstack:
+A callstack is used to keep the track of functions
+as well as normal statements that has to be executed
+here normal statements refer the console.log()
+
+It is also called as the ledger..
+var bar = ()=>{
+    foo();
+    console.log("Bar is executed!!");
+}
+var foo = ()=>{
+console.log("Foo is executed!!")
+}
+bar();
+
+webapi:
+It is the place where the actual time cosnuming operations
+are executed
+
+callback queue:
+It is the place where the time consuming 
+operations are kept one after another
+based on the execution time
+if the time consuming is less then
+it will be placed first...
+
+Event Loop:
+It is between the callstack vs Callback queue
+Event Loop checks whether the call stack is empty or not
+if it is empty it will push the function inside the call stack..
+
+callback:
+A function which is sent as a paramater to the another function
+The function, which is sent as a parameter is nothing but the callback function
+
+ex: MRF, for-each
+
+setTimeOut
+
+function foo(res,callback){
+console.log(`Hello ${res} welcome to JS`)
+callback();
+}
+
+function bar(){
+console.log("I am a call back function")
+}
+foo("rose",bar)
+
+Because Of the callback hell scenario,
+The callback are not used in the larger use case
+They are used in the smaller/ Minimalistic operations
